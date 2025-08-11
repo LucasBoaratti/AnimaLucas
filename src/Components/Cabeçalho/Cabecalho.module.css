@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+.containerCabecalho {
+    @apply bg-[#48CAE4];
+}
+
+.cabecalho {
+    @apply flex justify-between items-center p-[30px];
+}
+
+.home {
+    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px];
+}
+
+.home, .bi-house-door-fill {
+    @apply text-[50px];
+}
+
+.paragrafoHome {
+    @apply text-[20px] pl-[18px];
+}
