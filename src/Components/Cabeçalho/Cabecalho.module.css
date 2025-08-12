@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+/* Cabeçalho */
+
 .containerCabecalho {
     @apply bg-[#48CAE4];
 }
@@ -8,8 +10,10 @@
     @apply flex justify-between items-center p-[30px];
 }
 
+/* Botão home */
+
 .home {
-    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px];
+    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
 }
 
 .home, .bi-house-door-fill {
@@ -18,4 +22,64 @@
 
 .paragrafoHome {
     @apply text-[20px] pl-[18px];
+}
+
+/* Botão animal */
+
+.adotarAnimal {
+    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+}
+
+.adotarAnimal .patinha {
+    @apply w-[50px] h-[50px] mr-[15px] text-white;
+}
+
+.paragrafoAnimal {
+    @apply text-[20px] text-center;
+}
+
+/* Botão login */
+
+.login {
+    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+}
+
+.login, .bi-person-plus-fill {
+    @apply text-[50px];
+}
+
+.paragrafoLogin {
+    @apply text-[20px] pl-[18px];
+}
+
+/* Botão carrinho */
+
+.carrinho {
+    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+}
+
+.carrinho, .bi-cart-fill {
+    @apply text-[50px];
+}
+
+.paragrafoCarrinho {
+    @apply text-[20px] pl-[18px] text-center;
+}
+
+/* Componente da foto de perfil */
+
+.fotoPerfil {
+    @apply flex justify-center items-center gap-[10px];
+}
+
+.foto {
+    @apply w-[55px] h-[55px] rounded-full border-1 border-black;
+}
+
+.paragrafoNome {
+    @apply text-[20px];
+}
+
+.fotoPerfil, .bi-pencil-square {
+    @apply text-[20px];
 }
