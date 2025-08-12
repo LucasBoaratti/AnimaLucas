@@ -1,0 +1,7 @@
+.banner {
+    @apply w-full relative bg-[#FA7100] flex justify-center;
+}
+
+.produtosCachorro {
+    @apply text-center text-[24px] mt-[35px];
+}
