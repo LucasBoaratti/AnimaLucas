@@ -1,12 +1,17 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
+@font-face {
+	font-family: "Lobster";
+	src: url("./assets/Font/Lobster 1.4.otf") format("opentype");
+}
+
 @import 'tailwindcss';
 
 * {
 	@apply p-0 m-0 box-border;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: "Lobster", sans-serif;
 }
 
 body {
 	@apply bg-[#EAEAEA];
-} 
+}

@@ -1,12 +1,11 @@
-import { Cabecalho } from "./Components/Cabeçalho/Cabecalho";
-import { Home } from "./Pages/Home/Home";
+import { BrowserRouter } from "react-router-dom";
+import { Rotas } from "./Routes/Rotas";
 
 function App() {
 	return (
-		<>
-			<Cabecalho/>
-			<Home/>
-		</>
+		<BrowserRouter>
+			<Rotas/>
+		</BrowserRouter>
 	);
 }
 

@@ -1,7 +1,49 @@
+/* Banner */
+
 .banner {
     @apply w-full relative bg-[#FA7100] flex justify-center;
 }
 
+/* Título */
+
 .produtosCachorro {
     @apply text-center text-[24px] mt-[35px];
+}
+
+/* Container do carrossel */
+
+.carrosselContainer {
+    @apply flex justify-center items-center mt-[50px];
+}
+
+.cachorro {
+    @apply mr-[150px] ml-[30px];
+}
+
+/* Botão voltar */
+
+.voltar {
+    @apply text-[70px] mr-[30px] cursor-pointer;
+}
+
+/* Carrossel */
+
+.carrossel {
+    @apply relative w-[600px] h-[400px] overflow-hidden;
+}
+
+/* Imagens do carrossel */
+
+.imagemVisivel {
+    @apply absolute top-[0] left-[0] opacity-100 transition-opacity duration-500 w-full h-[400px];
+}
+
+/* Botão avançar */
+
+.avancar {
+    @apply text-[70px] ml-[30px] cursor-pointer;
+}
+
+.cachorro2 {
+    @apply ml-[150px] mr-[30px];
 }
