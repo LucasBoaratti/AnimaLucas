@@ -1,0 +1,7 @@
+.rodape {
+    @apply bg-[#48CAE4] p-[5px] mt-[50px];
+}
+
+.direitosAutorais {
+    @apply text-center text-[20px];
+}
