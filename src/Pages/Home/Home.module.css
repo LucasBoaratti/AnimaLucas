@@ -7,13 +7,13 @@
 /* Título */
 
 .produtosCachorro {
-    @apply text-center text-[24px] mt-[35px];
+    @apply text-center text-[30px] mt-[35px];
 }
 
 /* Container do carrossel */
 
 .carrosselContainer {
-    @apply flex justify-center items-center mt-[50px];
+    @apply flex justify-center items-center my-[50px];
 }
 
 .cachorro {
@@ -46,4 +46,66 @@
 
 .cachorro2 {
     @apply ml-[150px] mr-[30px];
+}
+
+/* Título */
+
+.produtosGato {
+    @apply text-center text-[30px] mt-[35px];
+}
+
+/* Imagens de gato no container do segundo carrossel */
+
+.gato {
+    @apply mr-[150px] ml-[30px];
+}
+
+.gato2 {
+    @apply ml-[150px] mr-[30px];
+}
+
+/* Seção do parágrafo de curiosidades */
+
+.paragrafoCuriosidades {
+    @apply flex justify-around items-center mb-[30px];
+}
+
+.curiosidadesAnimais {
+    @apply text-[30px];
+}
+
+/* Cards de curiosidades */
+
+.curiosidades {
+    @apply grid grid-cols-3 gap-[15px] max-w-[1140px] mx-auto;
+}
+
+/* Card de uma curiosidade */
+
+.curiosidade {
+    @apply flex flex-col w-full h-[270px] mb-[30px];
+}
+
+.tituloVoceSabia {
+    @apply bg-[#630FA8] text-[#ffffff] text-[24px] p-[5px];
+}
+
+.paragrafoExplicativo {
+    @apply bg-[#48CAE4] p-[10px] text-[20px] overflow-hidden h-[270px];
+}
+
+/* Seção do parágrafo de adoção */
+
+.paragrafoAdocao {
+    @apply flex justify-evenly items-center;
+}
+
+.paragrafoAdocao {
+    @apply text-[20px]
+}
+
+/* Link de adoção */
+
+.link {
+    @apply ml-[2px] cursor-pointer;
 }
