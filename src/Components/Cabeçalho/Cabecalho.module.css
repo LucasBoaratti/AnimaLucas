@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 /* Cabeçalho */
 
 .containerCabecalho {
@@ -13,7 +11,7 @@
 /* Botão home */
 
 .home {
-    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px] cursor-pointer;
+    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px] cursor-pointer;
 }
 
 .home, .bi-house-door-fill {
@@ -27,11 +25,11 @@
 /* Botão animal */
 
 .adotarAnimal {
-    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px];
 }
 
 .adotarAnimal .patinha {
-    @apply w-[50px] h-[50px] mr-[15px] text-white;
+    @apply w-[50px] h-[50px] mr-[15px] text-[#ffffff];
 }
 
 .paragrafoAnimal {
@@ -41,7 +39,7 @@
 /* Botão login */
 
 .login {
-    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px];
 }
 
 .login, .bi-person-plus-fill {
@@ -55,7 +53,7 @@
 /* Botão carrinho */
 
 .carrinho {
-    @apply flex justify-between items-center bg-[#630FA8] text-white p-[8px] rounded-[20px] h-[80px];
+    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px];
 }
 
 .carrinho, .bi-cart-fill {
@@ -73,11 +71,11 @@
 }
 
 .foto {
-    @apply w-[55px] h-[55px] rounded-full border-1 border-black;
+    @apply w-[55px] h-[55px] rounded-full border-1 border-[#000000];
 }
 
 .paragrafoNome {
-    @apply text-[25px] font-bold;
+    @apply text-[25px];
 }
 
 .fotoPerfil, .bi-pencil-square {
