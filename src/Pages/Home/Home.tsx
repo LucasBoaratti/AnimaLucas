@@ -13,28 +13,63 @@ export function Home() {
     const navigate = useNavigate();
 
     // Lista de imagens (pode adicionar mais no futuro)
-    const imagens = [
+    const imagensProdutosCachorros = [
         {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGn3H0sriZjpD9_moQA55lcVYGUIleqGpyA&s",
+            src: "https://images.tcdn.com.br/img/img_prod/573283/kit_para_banho_caes_filhotes_shampoo_condicionador_e_perfume_baby_cachorro_filhote_sanol_536825_1_8a3adef49c3ea7cc540cb1bcd1ab9e6a.jpg",
         },
         {
-            src: "https://corhexa.com/png/600x300/000000",
+            src: "https://dogsday.vtexassets.com/arquivos/ids/173048/79dcd832-4c59-4b35-b687-01c42a655f80.jpg?v=638711848216130000",
         },
         {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsszA_r3cTfW-OCorNuLqPDdLB3AvV_4H0DlsqlIs9eSD1Dero7MM6oJaMhvO1jNVZa-c&usqp=CAU",
+            src: "https://cdn.awsli.com.br/2500x2500/1257/1257817/produto/47899637/a676616c31.jpg",
+        },
+        {
+            src: "https://opinioescertificadas.com.br//wp-content/uploads/2020/11/pote-enxoval-para-cachorros.jpg",
+        },
+        {
+            src: "https://cdn.awsli.com.br/600x450/1668/1668783/produto/96623137/d987853914.jpg",
+        },
+    ];
+
+    // Imagens para o carrossel de produtos para gatos
+    const imagensProdutosGatos = [
+        {
+            src: "https://m.media-amazon.com/images/I/41McsuAg3WL._SR290,290_.jpg",
+        },
+        {
+            src: "https://a-static.mlcdn.com.br/800x560/playground-para-gatos-9-pecas-brinquedo-de-gato-com-arranhador-nicho-ponte-degrau-rede-em-mdf-box-fan/boxfan/ga954/b7b55734fad2b6e0231e800bce137186.jpeg",
+        },
+        {
+            src: "https://mimers.com.br/cdn/shop/files/Grande_7_1000x.png?v=1703249251",
+        },
+        {
+            src: "https://www.distribuidorapetshop.com.br/img/products/graminha-para-gatos-50g_1_1200.jpg",
+        },
+        {
+            src: "https://images.tcdn.com.br/img/img_prod/742943/suplemento_vitaminico_ducats_care_milk_para_gatos_280ml_6903_1_eceaace88602051fd48b2551181adeca.jpg",
         },
     ];
 
     // Estado que controla a imagem atual
     const [imagemAtual, setImagemAtual] = useState<number>(0);
+    const [imagemAtualCarrossel, setImagemAtualCarrossel] = useState<number>(0);
 
     // Usando setter ( () => ) para atualizar os estados
-    function voltar() {
-        setImagemAtual((anterior) => (anterior - 1 + imagens.length) % imagens.length);
+    function voltar(): void {
+        setImagemAtual((anterior) => (anterior - 1 + imagensProdutosCachorros.length) % imagensProdutosCachorros.length);
     }
 
-    function avancar() {
-        setImagemAtual((sucessor) => (sucessor + 1) % imagens.length);
+    function avancar(): void {
+        setImagemAtual((sucessor) => (sucessor + 1) % imagensProdutosCachorros.length);
+    }
+
+    // Carrossel de produtos para gatos
+    function voltar_imagens(): void {
+        setImagemAtualCarrossel((anterior) => (anterior - 1 + imagensProdutosGatos.length) % imagensProdutosGatos.length);
+    }
+
+    function avancar_imagens(): void {
+        setImagemAtualCarrossel((sucessor) => (sucessor + 1) % imagensProdutosGatos.length);
     }
     
     return (
@@ -53,7 +88,7 @@ export function Home() {
                 <button type="button" className={css.voltar} onClick={voltar}>⟨</button>
                 <div className={css.carrossel}>
                     {/* Declara apenas a imagem visível para o usuário e atualiza conforme ele clica nas setas */}
-                    <img src={imagens[imagemAtual].src} alt="Vermelho" className={css.imagemVisivel} />
+                    <img src={imagensProdutosCachorros[imagemAtual].src} alt="Imagens do carrossel." className={css.imagemVisivel} />
                 </div>
                 <button type="button" className={css.avancar} onClick={avancar}>⟩</button>
                 <div className={css.cachorro2}>
@@ -66,11 +101,11 @@ export function Home() {
                 <div className={css.gato}>
                     <img src={Gato} alt="Imagem de um gato com touca de gato." />
                 </div>
-                <button type="button" className={css.voltar} onClick={voltar}>⟨</button>
+                <button type="button" className={css.voltar} onClick={voltar_imagens}>⟨</button>
                 <div className={css.carrossel}>
-                    <img src={imagens[imagemAtual].src} alt="Imagens do carrossel." className={css.imagemVisivel} />
+                    <img src={imagensProdutosGatos[imagemAtualCarrossel].src} alt="Imagens do carrossel." className={css.imagemVisivel} />
                 </div>
-                <button type="button" className={css.avancar} onClick={avancar}>⟩</button>
+                <button type="button" className={css.avancar} onClick={avancar_imagens}>⟩</button>
                 <div className={css.gato2}>
                     <img src={Gato} alt="Imagem de um gato com touca de gato." />
                 </div>

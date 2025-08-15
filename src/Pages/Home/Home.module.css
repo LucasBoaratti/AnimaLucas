@@ -35,7 +35,7 @@
 /* Imagens do carrossel */
 
 .imagemVisivel {
-    @apply absolute top-[0] left-[0] opacity-100 transition-opacity duration-500 w-full h-[400px];
+    @apply absolute top-[0] left-[0] opacity-100 transition-opacity duration-500 w-full h-[400px] border-1 border-[#000000];
 }
 
 /* Botão avançar */
