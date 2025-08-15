@@ -1,0 +1,77 @@
+/* Componente de imagem + login */
+
+.containerLogin {
+    @apply flex justify-center items-center min-h-screen;
+}
+
+/* Imagem */
+
+.bethany .imagem {
+    @apply h-[792px];
+}
+
+/* Container de dados para o login */
+
+.containerInformacoes {
+    @apply bg-[#48CAE4] h-[792px] flex p-[15px] rounded-r-[15px];
+}
+
+.dadosLogin {
+    @apply flex flex-col justify-center;
+}
+
+.titulo {
+    @apply text-[30px] mb-[15px];
+}
+
+/* Campos do formulário */
+
+.label {
+    @apply text-[20px];
+}
+
+.nome {
+    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px] mb-[10px];
+}
+
+.nome::placeholder {
+    @apply text-[#A0A0A0];
+}
+
+.senha {
+    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px] mb-[10px];
+}
+
+/* Parágrafo esqueci minha senha */
+
+.paragrafoSenha {
+    @apply text-end text-[18px] mt-[10px];
+}
+
+.esqueciMinhaSenha {
+    @apply cursor-pointer;
+}
+
+/* Botão do formulário */
+
+.containerBotao {
+    @apply text-center;
+}
+
+.containerBotao .botao {
+    @apply bg-[#630FA8] px-[35px] py-[10px] my-[30px] rounded-[15px] cursor-pointer text-[#ffffff];
+}
+
+.botao:hover {
+    @apply bg-[#001A39]
+}
+
+/* Parágrafo não possui uma conta */
+
+.paragrafoCadastro {
+    @apply text-center;
+}
+
+.cadastro {
+    @apply cursor-pointer;
+}
