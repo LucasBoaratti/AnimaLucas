@@ -15,31 +15,31 @@ export function Cabecalho() {
                 <img src={Logo} alt="Logomarca do site com um fundo vermelho, letras brancas com o nome AnimaLucas e dois animais, um gato no lado esquerdo e um cachorro no lado direito." />
                 {/* Botão home */}
                 <section onClick={() => navigate("/")}>
-                    <section className={css.home}>
+                    <div className={css.home}>
                         <i className="bi bi-house-door-fill"></i>
                         <p className={css.paragrafoHome}>Home</p>
-                    </section>
+                    </div>
                 </section>
                 {/* Botão animal */}
                 <section>
-                    <section className={css.adotarAnimal}>
+                    <div className={css.adotarAnimal}>
                         <img src={Pata} alt="Ícone de pata de animal." className={css.patinha} />
                         <p className={css.paragrafoAnimal}>Adote um <br /> animal</p>
-                    </section>
+                    </div>
                 </section>
                 {/* Botão login */}
-                <section>
-                    <section className={css.login}>
+                <section onClick={() => navigate("/")}>
+                    <div className={css.login}>
                         <i className="bi bi-person-plus-fill"></i>
                         <p className={css.paragrafoLogin}>Login</p>
-                    </section>
+                    </div>
                 </section>
                 {/* Botão carrinho */}
                 <section>
-                    <section className={css.carrinho}>
+                    <div className={css.carrinho}>
                         <i className="bi bi-cart-fill"></i>
                         <p className={css.paragrafoCarrinho}>Carrinho de <br /> compras</p>
-                    </section>
+                    </div>
                 </section>
                 {/* Componente da foto de perfil */}
                 <section className={css.fotoPerfil}>
