@@ -1,10 +1,30 @@
+import { useNavigate } from "react-router-dom";
 import Bethany from "../../assets/Bethany.png";
 import css from "./Login.module.css";
+import { useState } from "react";
 
 export function Login() {
+    const [nome, setNome] = useState("");
+    const [senha, setSenha] = useState("");
+    const navigate = useNavigate();
+
+    function login(): void {
+        try {
+            setNome("Olá, seja bem vindo");
+            setSenha("Senha correta!");
+
+            navigate("/home");
+        }
+        catch(error) {
+            setNome("");
+            setSenha("");
+
+            alert("Usuário, não cadastrado, ou senha incorretos.");
+        }
+    }
     return (
         <main>
-            {/* Componente de imagem  login */}
+            {/* Componente de imagem login */}
             <section className={css.containerLogin}>
                 {/* Imagem chamativa e fofa */}
                 <div className={css.bethany}>
@@ -17,15 +37,15 @@ export function Login() {
                         {/* Formulário de login */}
                         <form>
                             <label htmlFor="nome" className={css.label}>Nome</label> <br />
-                            <input type="text" name="nome" className={css.nome} placeholder="Nome de usuário" minLength={1} maxLength={20} /> <br />
+                            <input type="text" name="nome" className={css.nome} placeholder="Nome de usuário" minLength={1} maxLength={20} onChange={(e) => {setNome(e.target.value)}} /> <br />
 
                             <label htmlFor="senha" className={css.label}>Senha</label> <br />
-                            <input type="password" name="senha" className={css.senha} placeholder="Senha" minLength={8} maxLength={15} /> <br />
+                            <input type="password" name="senha" className={css.senha} placeholder="Senha" minLength={8} maxLength={15} onChange={(e) => {setNome(e.target.value)}}/> <br />
 
                             <p className={css.paragrafoSenha}><u className={css.esqueciMinhaSenha}>Esqueci minha senha</u></p>
 
                             <div className={css.containerBotao}>
-                                <button type="submit" className={css.botao}>Entrar</button>
+                                <button type="submit" className={css.botao} onClick={login}>Entrar</button>
                             </div>
 
                             <p className={css.paragrafoCadastro}>Não possui uma conta? <u className={css.cadastro}>Cadastro</u></p>

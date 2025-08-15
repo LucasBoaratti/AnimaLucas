@@ -1,19 +1,19 @@
 /* Componente de imagem + login */
 
 .containerLogin {
-    @apply flex justify-center items-center min-h-screen;
+    @apply flex justify-center items-center min-h-screen my-[40px];
 }
 
 /* Imagem */
 
 .bethany .imagem {
-    @apply h-[792px];
+    @apply w-[595px] h-[792px];
 }
 
 /* Container de dados para o login */
 
 .containerInformacoes {
-    @apply bg-[#48CAE4] h-[792px] flex p-[15px] rounded-r-[15px];
+    @apply bg-[#48CAE4] h-[792px] flex p-[15px] rounded-r-[20px];
 }
 
 .dadosLogin {
