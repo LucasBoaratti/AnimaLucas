@@ -14,7 +14,7 @@ export function Cabecalho() {
                 {/* Logomarca do site */}
                 <img src={Logo} alt="Logomarca do site com um fundo vermelho, letras brancas com o nome AnimaLucas e dois animais, um gato no lado esquerdo e um cachorro no lado direito." />
                 {/* Botão home */}
-                <section onClick={() => navigate("/")}>
+                <section onClick={() => navigate("/home")}>
                     <div className={css.home}>
                         <i className="bi bi-house-door-fill"></i>
                         <p className={css.paragrafoHome}>Home</p>

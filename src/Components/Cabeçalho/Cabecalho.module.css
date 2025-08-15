@@ -39,7 +39,7 @@
 /* Botão login */
 
 .login {
-    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px];
+    @apply flex justify-between items-center bg-[#630FA8] text-[#ffffff] p-[8px] rounded-[20px] h-[80px] cursor-pointer;
 }
 
 .login, .bi-person-plus-fill {
