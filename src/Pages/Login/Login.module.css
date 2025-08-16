@@ -1,7 +1,7 @@
 /* Componente de imagem + login */
 
 .containerLogin {
-    @apply flex justify-center items-center min-h-screen my-[40px];
+    @apply flex justify-center items-center min-h-screen;
 }
 
 /* Imagem */
