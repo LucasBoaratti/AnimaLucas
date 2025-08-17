@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import css from "./LoginModal.module.css";
 
-// Tipando a propriedade de abrir o modal para boolean (ou void)
+// Tipando a propriedade de abrir o modal para boolean ou void
 type propOpenModal = {
     openModal: boolean | void,
 }
