@@ -1,0 +1,81 @@
+/* Container da página de cadastro */
+
+.containerCadastro {
+    @apply flex justify-center items-center min-h-screen;
+}
+
+/* Imagem */
+
+.khalisse .imagem {
+    @apply w-[595px] h-[792px];
+}
+
+/* Container do cadastro */
+
+.containerDadosCadastro {
+    @apply bg-[#48CAE4] h-[792px] flex p-[35px] rounded-r-[20px];
+}
+
+.formularioCadastro {
+    @apply flex flex-col justify-center;
+}
+
+.titulo {
+    @apply text-[30px] mb-[15px];
+}
+
+/* Campos do formulário */
+
+.label {
+    @apply text-[20px];
+}
+
+.input {
+    @apply bg-[white] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px];
+}
+
+.input::placeholder {
+    @apply text-[#A0A0A0];
+}
+
+/* Campo da foto de perfil */
+
+.fotoPerfil {
+    @apply flex items-center;
+}
+
+.inputFoto {
+    @apply bg-[white] w-[132px] h-[40px] rounded-[15px] pl-[5px] text-[18px] text-transparent mr-[5px] cursor-pointer truncate; 
+}
+
+.inputFoto::file-selector-button {
+    @apply text-[#A0A0A0] text-[18px] mt-[6px] cursor-pointer;
+}
+
+.nomeArquivo {
+    @apply truncate max-w-[200px];
+}
+
+/* Botão de cadastrar */
+
+.containerBotao {
+    @apply text-center;
+}
+
+.botao {
+    @apply text-[white] bg-[#630FA8] mt-[25px] cursor-pointer py-[8px] w-[122px] h-[40px] rounded-[15px]; 
+}
+
+.botao:hover {
+    @apply bg-[#001A39];
+}
+
+/* Parágrafo possui uma conta */
+
+.paragrafoLogin {
+    @apply text-center mt-[30px];
+}
+
+.login {
+    @apply cursor-pointer;
+}
