@@ -13,7 +13,7 @@
 /* Container de dados para o login */
 
 .containerInformacoes {
-    @apply bg-[#48CAE4] h-[792px] flex p-[15px] rounded-r-[20px];
+    @apply bg-[#48CAE4] h-[792px] flex p-[30px] rounded-r-[20px];
 }
 
 .dadosLogin {
@@ -31,7 +31,7 @@
 }
 
 .nome {
-    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px] mb-[10px];
+    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px];
 }
 
 .nome::placeholder {
@@ -39,7 +39,11 @@
 }
 
 .senha {
-    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px] mb-[10px];
+    @apply bg-[#ffffff] w-full h-[40px] rounded-[15px] pl-[5px] text-[18px];
+}
+
+.senha::placeholder {
+    @apply text-[#A0A0A0];
 }
 
 /* Parágrafo esqueci minha senha */

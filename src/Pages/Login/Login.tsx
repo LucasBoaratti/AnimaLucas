@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -9,10 +10,10 @@ import css from "./Login.module.css";
 // Campos de validação com zod
 const validacaoLogin = z.object({
     nome: z.string()
-        .min(3, "O campo nome tem que possuir no mínimo 3 caracteres.")
+        .min(3, "O campo nome deve possuir no mínimo 3 caracteres.")
         .max(20, "O campo nome não pode passar de 20 caracteres."),
     senha: z.string()
-        .min(8, "O campo senha tem que possuir no mínimo 8 caracteres.")
+        .min(8, "O campo senha deve possuir no mínimo 8 caracteres.")
         .max(15, "O campo senha não pode ultrapassar 15 caracteres,"),
 });
 
@@ -21,6 +22,9 @@ export function Login() {
     const [nome, setNome] = useState("");
     const [senha, setSenha] = useState("");
     const [modalLogin, setModalLogin] = useState<boolean>(false);
+
+    // Navegação pelo site
+    const navigate = useNavigate();
 
     // Validações do formulário
     const {
@@ -59,11 +63,11 @@ export function Login() {
                         <form onSubmit={handleSubmit(login)}>
                             <label htmlFor="nome" className={css.label}>Nome</label> <br />
                             <input type="text" id="nome" className={css.nome} placeholder="Nome de usuário" minLength={3} maxLength={20} {...register("nome")} value={nome} onChange={(e) => {setNome(e.target.value)}} /> <br />
-                            {nome && (errors.nome && <p>{errors.nome.message}</p>)}
+                            {errors.nome && <p>{errors.nome.message}</p>}
 
                             <label htmlFor="senha" className={css.label}>Senha</label> <br />
                             <input type="password" id="senha" className={css.senha} placeholder="Senha" minLength={8} maxLength={15} {...register("senha")} value={senha} onChange={(e) => {setSenha(e.target.value)}} /> <br />
-                            {senha && (errors.senha && <p>{errors.senha.message}</p>)}
+                            {errors.senha && <p>{errors.senha.message}</p>}
 
                             <p className={css.paragrafoSenha}><u className={css.esqueciMinhaSenha}>Esqueci minha senha</u></p>
 
@@ -71,7 +75,7 @@ export function Login() {
                                 <button type="submit" className={css.botao}>Entrar</button>
                             </div>
 
-                            <p className={css.paragrafoCadastro}>Não possui uma conta? <u className={css.cadastro}>Cadastro</u></p>
+                            <p className={css.paragrafoCadastro}>Não possui uma conta? <u className={css.cadastro} onClick={() => navigate("/cadastro")}>Cadastro</u></p>
 
                             {/* Abrindo o modal após o preenchimento do formulário */}
                             {modalLogin && (<LoginModal openModal={modalLogin}/>)}
